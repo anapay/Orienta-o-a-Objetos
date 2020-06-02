@@ -1,8 +1,8 @@
 
 console.log("SisterBank")
  
-import {Cliente} from "./Cliente.js";
-import {ContaCorrente} from "./ContaCorrente.js";
+import {Cliente} from "./ACliente.js";
+import {ContaCorrente} from "./BContaCorrente.js";
 
 
 const cliente1 = new Cliente(); //estanciando cliente a classe
@@ -16,14 +16,10 @@ cliente2.cpf = 12345678911;
 const contaCorrenteAna = new ContaCorrente();
 contaCorrenteAna._saldo = 0;
 contaCorrenteAna.agencia = 13;
-contaCorrenteAna.depositar(102000000);
-contaCorrenteAna.depositar(102000000);
 contaCorrenteAna.cliente = cliente1;
+contaCorrenteAna.depositar(102000000);
+contaCorrenteAna.depositar(102000000);
 contaCorrenteAna.depositar(2000);
-
-
-
-
 
 const contaCorrenteJoao = new ContaCorrente();
 contaCorrenteJoao._saldo = 0;

@@ -24,6 +24,7 @@ export class ContaCorrente {
         this._saldo += valor;
 
     }
+    
     trasferir(valor, conta) {//aqui estou fazendo uma trasferencia desse valor para essa conta vou sacar esse valor da minha conta e vou depositar nessa outra conta
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
