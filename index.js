@@ -1,34 +1,8 @@
 
 console.log("SisterBank")
-
-
-class Cliente {
-
-    nome;//atributos da minha classe
-    cpf; return
-}
-
-class ContaCorrente {
-
-    agencia;
-    _saldo;
-
-    sacar(valor) {//adicionando comportamento aos objetos chamdos de métodos. Dentro das chaves eu vou definir o que essa operação vai fazer.
-        if (this._saldo >= valor) { //this diz dessa conta corrente eu quero ver o saldo, ou valor seja qual for o parametro passado.
-            this._saldo -= valor
-            return valor //essa função devolve o valor pra quem chamou o metodo
-        }
-
-    }
-
-    depositar(valor) {
-        if (valor <= 0) {
-            return;
-        }
-        this._saldo += valor;
-
-    }
-}
+ 
+import {Cliente} from "./Cliente.js";
+import {ContaCorrente} from "./ContaCorrente.js";
 
 
 const cliente1 = new Cliente(); //estanciando cliente a classe
@@ -39,13 +13,30 @@ const cliente2 = new Cliente();
 cliente2.nome = "Joao";
 cliente2.cpf = 12345678911;
 
-
 const contaCorrenteAna = new ContaCorrente();
 contaCorrenteAna._saldo = 0;
 contaCorrenteAna.agencia = 13;
-
 contaCorrenteAna.depositar(102000000);
-contaCorrenteAna.sacar(1000);
+contaCorrenteAna.depositar(102000000);
+contaCorrenteAna.cliente = cliente1;
+contaCorrenteAna.depositar(2000);
+
+
+
+
+
+const contaCorrenteJoao = new ContaCorrente();
+contaCorrenteJoao._saldo = 0;
+contaCorrenteJoao.agencia = 1001;
+contaCorrenteJoao.cliente = cliente2;
+
+contaCorrenteAna.trasferir(2000, contaCorrenteJoao);
+contaCorrenteAna.trasferir(1000, contaCorrenteJoao);
+
 
 console.log(cliente1);
 console.log(contaCorrenteAna);
+
+
+//para criar esse arquivo utilizamos o comando (npm init)
+//arquivo json é um arquivo de marcação e temos algumas chaves e seus respctivos valores  lá vamos adicionar o type (module);

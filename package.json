@@ -1,0 +1,22 @@
+{
+  "name": "sisterbank",
+  "version": "1.0.0",
+  "description": "Projeto do sisterbank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anapay/Orienta-o-a-Objetos.git"
+  },
+  "author": "Anapay",
+  "license": "ISC",
+  "type": "module",
+
+  "bugs": {
+    "url": "https://github.com/anapay/Orienta-o-a-Objetos/issues"
+  },
+  "homepage": "https://github.com/anapay/Orienta-o-a-Objetos#readme"
+}
+
