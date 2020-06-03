@@ -1,7 +1,8 @@
 import { Cliente } from "./ACliente.js";
 
 export class ContaCorrente {
-
+    
+    static numeroContas = 0;
     agencia;
     _cliente;
     _saldo = 0; //atributos privados
@@ -21,10 +22,11 @@ export class ContaCorrente {
         return this._saldo;
     }
 
-    constructor(cliente, agencia){
+    constructor(cliente, agencia) {
         this.cliente = cliente;
         this.agencia = agencia;
-     
+        ContaCorrente.numeroContas += 1;
+
     }
 
     sacar(valor) {//adicionando comportamento aos objetos chamdos de métodos. Dentro das chaves eu vou definir o que essa operação vai fazer.

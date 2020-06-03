@@ -1,14 +1,14 @@
 
 console.log("SisterBank")
- 
-import {Cliente} from "./ACliente.js";
-import {ContaCorrente} from "./BContaCorrente.js";
+
+import { Cliente } from "./ACliente.js";
+import { ContaCorrente } from "./BContaCorrente.js";
 
 const cliente1 = new Cliente("Ana", 12345678910); //estanciando cliente a classe
 
 const cliente2 = new Cliente("Joao", 12345678911); //passando informações pelo constructor
 
-const conta1 = new ContaCorrente(cliente1,1001);
+const conta1 = new ContaCorrente(cliente1, 1001);
 conta1.depositar(102000000);
 const conta2 = new ContaCorrente(cliente2, 1001);
 let valor = 20000;
@@ -16,6 +16,7 @@ let valor = 20000;
 conta1.trasferir(valor, conta2)
 
 console.log(cliente1, conta1);
+console.log(ContaCorrente.numeroContas);
 
 
 
