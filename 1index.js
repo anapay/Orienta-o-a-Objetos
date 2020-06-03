@@ -4,26 +4,19 @@ console.log("SisterBank")
 import {Cliente} from "./ACliente.js";
 import {ContaCorrente} from "./BContaCorrente.js";
 
-
 const cliente1 = new Cliente("Ana", 12345678910); //estanciando cliente a classe
 
 const cliente2 = new Cliente("Joao", 12345678911); //passando informações pelo constructor
 
 const conta1 = new ContaCorrente(cliente1,1001);
-conta1._saldo = 0;
-// conta1.depositar(102000000);
-// conta1.depositar(102000000);
-// conta1.depositar(2000);
-
+conta1.depositar(102000000);
 const conta2 = new ContaCorrente(cliente2, 1001);
+let valor = 20000;
 
-conta2._saldo = 0;
-// conta1.trasferir(2000, conta2);
-// conta1.trasferir(1000, conta2);
+conta1.trasferir(valor, conta2)
 
+console.log(cliente1, conta1);
 
-console.log(cliente2);
-console.log(conta2);
 
 
 //para criar esse arquivo utilizamos o comando (npm init)
