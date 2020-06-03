@@ -13,25 +13,26 @@ const cliente2 = new Cliente();
 cliente2.nome = "Joao";
 cliente2.cpf = 12345678911;
 
-const contaCorrenteAna = new ContaCorrente();
-contaCorrenteAna._saldo = 0;
-contaCorrenteAna.agencia = 13;
-contaCorrenteAna.cliente = cliente1;
-contaCorrenteAna.depositar(102000000);
-contaCorrenteAna.depositar(102000000);
-contaCorrenteAna.depositar(2000);
+const conta1 = new ContaCorrente();
+conta1._saldo = 0;
+conta1.agencia = 13;
+conta1.cliente = cliente1;
+conta1.depositar(102000000);
+conta1.depositar(102000000);
+conta1.depositar(2000);
 
-const contaCorrenteJoao = new ContaCorrente();
-contaCorrenteJoao._saldo = 0;
-contaCorrenteJoao.agencia = 1001;
-contaCorrenteJoao.cliente = cliente2;
+const conta2 = new ContaCorrente();
 
-contaCorrenteAna.trasferir(2000, contaCorrenteJoao);
-contaCorrenteAna.trasferir(1000, contaCorrenteJoao);
+conta2._saldo = 0;
+conta2.agencia = 1001;
+conta2.cliente = cliente2;
+
+conta1.trasferir(2000, conta2);
+conta1.trasferir(1000, conta2);
 
 
 console.log(cliente1);
-console.log(contaCorrenteAna);
+console.log(conta1);
 
 
 //para criar esse arquivo utilizamos o comando (npm init)
